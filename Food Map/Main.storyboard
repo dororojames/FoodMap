@@ -107,7 +107,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CDu-Zb-ewp"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="美食地圖" image="Map" id="mAd-cP-Dvm"/>
                     <connections>
                         <outlet property="mapView" destination="3eO-se-R89" id="4sO-x0-eRN"/>
                         <outlet property="tableView" destination="dG1-6V-3wP" id="US4-vc-gyg"/>
@@ -469,9 +468,6 @@
             <point key="canvasLocation" x="2087" y="305"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Map" width="13" height="13"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="DFg-EE-F9X"/>
         <segue reference="1G4-uc-gFU"/>

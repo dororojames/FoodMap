@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E199" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Contacts" representedClassName="Contacts" syncable="YES">
+        <attribute name="contact" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="r_ID" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="contacts" maxCount="1" deletionRule="Nullify" destinationEntity="Restaurants" inverseName="contact" inverseEntity="Restaurants" syncable="YES"/>
+    </entity>
+    <entity name="Opentime" representedClassName="Opentime" syncable="YES">
+        <attribute name="day" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="r_ID" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="timeslot" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="opentime" maxCount="1" deletionRule="Nullify" destinationEntity="Restaurants" inverseName="opentime" inverseEntity="Restaurants" syncable="YES"/>
+    </entity>
+    <entity name="Restaurants" representedClassName="Restaurants" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price_range" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="r_ID" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="contact" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Contacts" inverseName="contacts" inverseEntity="Contacts" syncable="YES"/>
+        <relationship name="opentime" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Opentime" inverseName="opentime" inverseEntity="Opentime" syncable="YES"/>
+        <relationship name="tag" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tags" inverseName="tags" inverseEntity="Tags" syncable="YES"/>
+    </entity>
+    <entity name="Tags" representedClassName="Tags" syncable="YES">
+        <attribute name="r_ID" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="tag" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="tags" maxCount="1" deletionRule="Nullify" destinationEntity="Restaurants" inverseName="tag" inverseEntity="Restaurants" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Contacts" positionX="216" positionY="-459" width="128" height="88"/>
+        <element name="Opentime" positionX="-90" positionY="-202" width="128" height="103"/>
+        <element name="Restaurants" positionX="-74" positionY="-504" width="128" height="178"/>
+        <element name="Tags" positionX="216" positionY="-207" width="117" height="88"/>
+    </elements>
+</model>
